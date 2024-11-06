@@ -26,7 +26,7 @@
 .header1 {
   position: fixed;
   top: 8px;
-  width: 96%;
+  width: 100%;
   /* padding: 0 1rem; */
   z-index: 30;
   font-family: "Marcellus", serif !important;
@@ -107,6 +107,15 @@
 @media (max-width: 768px) {
   .section1 .header {
     max-height: 90vh;
+  }
+
+  .header1 {
+    position: fixed;
+    top: 8px;
+    width: 96%;
+    /* padding: 0 1rem; */
+    z-index: 30;
+    font-family: "Marcellus", serif !important;
   }
 
   .section1 {
