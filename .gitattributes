@@ -1,0 +1,2 @@
+*.mov filter=lfs diff=lfs merge=lfs -text
+assets/globs/*.mov filter=lfs diff=lfs merge=lfs -text
