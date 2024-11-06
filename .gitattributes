@@ -1,2 +1,5 @@
 *.mov filter=lfs diff=lfs merge=lfs -text
 assets/globs/*.mov filter=lfs diff=lfs merge=lfs -text
+assets/sect-4-bg.mp4 filter=lfs diff=lfs merge=lfs -text
+assets/section5/sect5-front.gif filter=lfs diff=lfs merge=lfs -text
+assets/section5/vid3.mp4 filter=lfs diff=lfs merge=lfs -text
