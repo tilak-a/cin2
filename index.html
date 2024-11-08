@@ -618,6 +618,7 @@
     <!-- Section 4 -->
     <section id="section4" class="section section4">
       <video
+        preload="none"
         playsinline
         autoplay
         muted
@@ -629,6 +630,7 @@
         Your browser does not support the video tag.
       </video>
       <video
+        preload="none"
         playsinline
         autoplay
         muted
@@ -682,6 +684,7 @@
     <!-- Section 5 -->
     <section id="section5" class="section section5">
       <video
+        preload="none"
         playsinline
         autoplay
         muted
@@ -689,11 +692,12 @@
         loop
         class="fullscreen-video"
       >
-        <source src="assets/globs/clients.mp4" type="video/mp4" />
+        <source src="assets/globs/clients.m4v" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <video
+        preload="none"
         playsinline
         autoplay
         muted
@@ -730,6 +734,29 @@
     </section>
 
     <script src="lib/js/jquery.js"></script>
+    <script>
+      function lazyLoadVideo() {
+        const videos = document.querySelectorAll("video[data-src]");
+        console.log("videos...", videos);
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const video = entry.target;
+              video.src = video.dataset.src;
+              video.removeAttribute("data-src");
+              observer.unobserve(video);
+            }
+          });
+        });
+
+        videos.forEach((video) => {
+          observer.observe(video);
+        });
+      }
+
+      window.addEventListener("DOMContentLoaded", lazyLoadVideo);
+    </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="lib/js/custom.js"></script>
     <script src="lib/js/transition.js"></script>
