@@ -1118,20 +1118,37 @@
             }
 
             function supportsHEVCAlpha() {
+              // const userAgent = navigator.userAgent;
+              // const isIOS =
+              //   /iPad|iPhone|iPod/.test(userAgent) ||
+              //   (navigator.platform === "MacIntel" &&
+              //     navigator.maxTouchPoints > 1);
+
+              // // Check if it's Safari on Mac (but not Chrome)
+              // const isMacSafari =
+              //   navigator.vendor.includes("Apple") &&
+              //   !userAgent.includes("Chrome") &&
+              //   !isIOS;
+
+              // // All iOS browsers or Mac Safari should use MOV
+              // return isIOS || isMacSafari;
+
+              // let isSafari =
+              //   navigator.vendor.match(/apple/i) &&
+              //   !navigator.userAgent.match(/crios/i) &&
+              //   !navigator.userAgent.match(/fxios/i) &&
+              //   !navigator.userAgent.match(/Opera|OPT\//) &&
+              //   !userAgent.includes("Chrome");
+
+              // if (isSafari == null) {
+              //   isSafari = false;
+              // }
+              // return isSafari;
+
               const userAgent = navigator.userAgent;
-              const isIOS =
-                /iPad|iPhone|iPod/.test(userAgent) ||
-                (navigator.platform === "MacIntel" &&
-                  navigator.maxTouchPoints > 1);
-
-              // Check if it's Safari on Mac (but not Chrome)
-              const isMacSafari =
-                navigator.vendor.includes("Apple") &&
-                !userAgent.includes("Chrome") &&
-                !isIOS;
-
-              // All iOS browsers or Mac Safari should use MOV
-              return isIOS || isMacSafari;
+              return (
+                userAgent.includes("Safari") && !userAgent.includes("Chrome")
+              );
             }
 
             if (supportsHEVCAlpha()) {
