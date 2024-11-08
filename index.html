@@ -1119,9 +1119,19 @@
 
             function supportsHEVCAlpha() {
               const userAgent = navigator.userAgent;
-              return (
-                userAgent.includes("Safari") && !userAgent.includes("Chrome")
-              );
+              const isIOS =
+                /iPad|iPhone|iPod/.test(userAgent) ||
+                (navigator.platform === "MacIntel" &&
+                  navigator.maxTouchPoints > 1);
+
+              // Check if it's Safari on Mac (but not Chrome)
+              const isMacSafari =
+                navigator.vendor.includes("Apple") &&
+                !userAgent.includes("Chrome") &&
+                !isIOS;
+
+              // All iOS browsers or Mac Safari should use MOV
+              return isIOS || isMacSafari;
             }
 
             if (supportsHEVCAlpha()) {
