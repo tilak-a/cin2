@@ -104,8 +104,13 @@
 }
 
 .footer-links > a {
-  color: #fff;
+  color: #e3b442;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.copyright {
+  color: #e3b442;
 }
 
 @media (max-width: 708px) {
