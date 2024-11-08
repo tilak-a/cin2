@@ -950,6 +950,9 @@
             if (!isIE11()) {
               if (planet == "Mercury") {
                 sunVideo.style.transform = `translateX(-50%) scale(0.56)`;
+                if (ismobile) {
+                  sunVideo.style.transform = `translateX(-50%) scale(0.75)`;
+                }
                 globe.classList.add("fade-down-left");
                 setTimeout(() => {
                   globe.src = supportsHEVCAlpha()
@@ -960,24 +963,36 @@
               } else if (planet == "Venus") {
                 globe.classList.add("fade-down-left");
                 sunVideo.style.transform = `translateX(-50%) scale(0.56)`;
+                if (ismobile) {
+                  sunVideo.style.transform = `translateX(-50%) scale(0.75)`;
+                }
                 // globe.src = "assets/globs/Venus.webm";
                 globe.src = supportsHEVCAlpha()
                   ? "assets/globs/venusoutputnew.mov"
                   : "assets/globs/Venus.webm";
               } else if (planet == "Earth") {
                 sunVideo.style.transform = `translateX(-50%) scale(0.56)`;
+                if (ismobile) {
+                  sunVideo.style.transform = `translateX(-50%) scale(0.75)`;
+                }
                 // globe.src = "assets/globs/Earth.webm";
                 globe.src = supportsHEVCAlpha()
                   ? "assets/globs/earthouputnew.mov"
                   : "assets/globs/Earth.webm";
               } else if (planet == "Mars") {
                 sunVideo.style.transform = `translateX(-50%) scale(0.56)`;
+                if (ismobile) {
+                  sunVideo.style.transform = `translateX(-50%) scale(0.75)`;
+                }
                 // globe.src = "assets/globs/Mars.webm";
                 globe.src = supportsHEVCAlpha()
                   ? "assets/globs/marsoutputnew.mov"
                   : "assets/globs/Mars.webm";
               } else if (planet == "Jupiter") {
                 sunVideo.style.transform = `translateX(-50%) scale(0.56)`;
+                if (ismobile) {
+                  sunVideo.style.transform = `translateX(-50%) scale(0.75)`;
+                }
                 globe.src = supportsHEVCAlpha()
                   ? "assets/globs/jupiteroutputnew.mov"
                   : "assets/globs/Jupiter.webm";
@@ -1005,11 +1020,17 @@
                   : "assets/globs/Saturn.webm";
               } else if (planet == "Uranus") {
                 sunVideo.style.transform = `translateX(-50%) scale(0.56)`;
+                if (ismobile) {
+                  sunVideo.style.transform = `translateX(-50%) scale(0.75)`;
+                }
                 globe.src = supportsHEVCAlpha()
                   ? "assets/globs/uranusoutputnew.mov"
                   : "assets/globs/Uranus.webm";
               } else if (planet == "Neptune") {
                 sunVideo.style.transform = `translateX(-50%) scale(0.56)`;
+                if (ismobile) {
+                  sunVideo.style.transform = `translateX(-50%) scale(0.75)`;
+                }
                 // globe.src = "assets/globs/Neptune.webm";
                 globe.src = supportsHEVCAlpha()
                   ? "assets/globs/neptuneoutputnew.mov"
@@ -1017,6 +1038,9 @@
                 globe.classList.add("fade-down-left");
               } else {
                 sunVideo.style.transform = `translateX(-50%) scale(0.56)`;
+                if (ismobile) {
+                  sunVideo.style.transform = `translateX(-50%) scale(0.75)`;
+                }
                 // globe.src = "assets/globs/sun.webm";
                 globe.src = supportsHEVCAlpha()
                   ? "assets/globs/sunoutputnew.mov"
